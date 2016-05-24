@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
   res.sendfile(__dirname + "/views/index.html");
 });
 
-app.get('/api/kitties', controllers.)
+app.get('/api/kitties', controllers.kitties.index);
 
 app.listen(process.env.PORT || 3000, function () {
   console.log('MEAN-lab listening');
