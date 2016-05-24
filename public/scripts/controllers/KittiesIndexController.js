@@ -6,7 +6,7 @@ angular
 
   function KittiesIndexController ($http) {
     var vm = this;
-    vm.newKitty = {};
+    // vm.newKitty = {};
     vm.newKitty = {
       name: "snuggles"
     };

@@ -12,8 +12,8 @@ function config($routeProvider, $locationProvider) {
       controller: 'KittiesIndexController'
     });
 
-    $locationProvider.html5mode({
-      enabled: true,
-      requireBase: false
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
     });
 }
