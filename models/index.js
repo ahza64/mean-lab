@@ -1,5 +1,7 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/mean-lab");
+mongoose.connect(process.env.MONGOLAB_URI ||
+                 process.env.MONGOHQ_URL ||
+                 "mongodb://localhost/mean-lab");
 
 var Kitty = require('./kitty')
 

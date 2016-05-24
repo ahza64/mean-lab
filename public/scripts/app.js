@@ -1,14 +1,19 @@
 console.log("sanity check: js is working");
 
-$(document).ready(function(){
+angular
+  .module('mean-lab', ['ngRoute'])
+  .config(config);
 
+function config($routeProvider, $locationProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'templates/kitties',
+      controllerAS: 'kittiesIndexCtrl',
+      controller: 'KittiesIndexController'
+    });
 
-
-
-
-
-
-
-
-
-}); //end doc.ready
+    $locationProvider.html5mode({
+      enabled: true,
+      requireBase: false
+    });
+}
